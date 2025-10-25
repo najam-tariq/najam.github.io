@@ -36,6 +36,7 @@
     </nav>
 
     <section id="home" class="hero">
+        <canvas id="neural-network-canvas"></canvas>
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
@@ -475,7 +476,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Najam Tariq. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Najam Tariq. All rights reserved.</p>
+                <p class="footer-heart">Made with <span class="heart">❤️</span></p>
+            </div>
             <div class="footer-links">
                 <a href="https://github.com/najam-tariq" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/najam-tariq" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -484,7 +488,48 @@
         </div>
     </footer>
 
+    <div id="matrix-terminal" class="terminal-hidden">
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <span class="terminal-title">NAJAM::TERMINAL</span>
+                <button class="terminal-close" id="terminal-close">&times;</button>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div id="terminal-output"></div>
+                <div class="terminal-input-line">
+                    <span class="terminal-prompt">></span>
+                    <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="Type 'help' for commands...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ai-search-bar-container">
+        <div class="ai-search-bar">
+            <input 
+                type="text" 
+                id="ai-search-input" 
+                class="ai-search-input" 
+                placeholder="Ask anything about Najam..."
+                autocomplete="off"
+            >
+            <button class="ai-search-btn" id="ai-search-btn">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="ai-result-card" id="ai-result-card">
+        <button class="ai-result-close" id="ai-result-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="ai-result-content" id="ai-result-content">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
+    <script src="ai-search.js"></script>
 </body>
 </html>
 
