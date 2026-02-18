@@ -52,7 +52,7 @@ function initNeuralNetwork() {
     const nodeCount = isMobile ? 30 : 50;
     const nodeGeometry = new THREE.SphereGeometry(0.3, isMobile ? 8 : 16, isMobile ? 8 : 16);
     const nodeMaterial = new THREE.MeshBasicMaterial({
-        color: 0x6366f1,
+        color: 0xfafafa,
         transparent: true,
         opacity: 0.8
     });
@@ -74,7 +74,7 @@ function initNeuralNetwork() {
     }
 
     const lineMaterial = new THREE.LineBasicMaterial({
-        color: 0x8b5cf6,
+        color: 0x71717a,
         transparent: true,
         opacity: 0.2
     });
@@ -118,7 +118,7 @@ function initNeuralNetwork() {
     
     particlesGeometry.setAttribute('position', new THREE.Float32BufferAttribute(particlePositions, 3));
     const particlesMaterial = new THREE.PointsMaterial({
-        color: 0xec4899,
+        color: 0xa1a1aa,
         size: 0.5,
         transparent: true,
         opacity: 0.6
@@ -146,7 +146,7 @@ function initNeuralNetwork() {
             node.scale.set(scale, scale, scale);
 
             const hue = (frameCount * 0.001 + node.position.x * 0.01) % 1;
-            node.material.color.setHSL(0.65 + hue * 0.1, 0.8, 0.6);
+            node.material.color.setHSL(0, 0, 0.6 + hue * 0.15);
         });
 
         particles.rotation.y += 0.0005;
